@@ -21,8 +21,8 @@
 }
 .chart1 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 1fr);
-  gap: 10px;
+  grid-template-columns: repeat(auto-fit, 50rem);
+  
 }
 
 .row{
