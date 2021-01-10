@@ -86,12 +86,11 @@ const options = {
   title: { display: true, },
   legend: {
     display: true,
-    position: "right", responsive: true, maintainAspectRatio: true,
+    position: "right", 
   }
 };
 const data = {
-  maintainAspectRatio: false,
-  responsive: false,
+  
   labels: ["male", "Female"],
   datasets: [
     {
@@ -103,8 +102,7 @@ const data = {
 };
 
 const data1 = {
-  maintainAspectRatio: false,
-  responsive: false,
+  
   labels: ["<75", "<50", "<25", "<15", "<5"],
   datasets: [
     {
