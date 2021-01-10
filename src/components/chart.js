@@ -23,7 +23,7 @@ class Chart extends Component {
                     //   borderColor = {'rgb(81, 133, 236)'}
                     //   borderWidth = {'500px'}
                     options={{
-                        responsive:true, maintainAspectRatio:true,
+                        
                         title: {
                             display: true,
                             text: 'Total Active and Resolved', fontSize: 25,
