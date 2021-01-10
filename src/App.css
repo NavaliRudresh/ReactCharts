@@ -23,7 +23,6 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, 1fr);
   gap: 10px;
-  grid-auto-rows: minmax(100%, auto);
 }
 
 .row{
