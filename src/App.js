@@ -1,7 +1,7 @@
 import './App.css';
 import Chart from './components/chart';
 import { Component } from 'react';
-import React, { useEffect } from "react";
+import React from "react";
 import { Doughnut } from "react-chartjs-2";
 
 
@@ -18,23 +18,27 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className='chart1'><Chart chartData={this.state.chartData} /></div>
+        <div className='chart1'>
 
-        <div style={styles.relative} className='donut'>
-          <Doughnut data={data} options={options} />
-          <div id="legend" />
+
+          <Chart chartData={this.state.chartData} />
         </div>
-        <div style={styles.relative1} className='donut1'>
-          <Doughnut data={data1} options={{
-            title: {
-              display: true,
-              text: 'Age Limit', fontSize: 12.5,
-            },
-            legend: {
-              position: 'right'
-            }
-          }} />
-          <div id="legend" />
+        <div className='row'>
+
+          <div className='donut'><Doughnut data={data} options={options} /> <div id="legend" /></div>
+
+
+
+          <div className='donut1'>
+            <Doughnut data={data1} options={{
+              title: {
+                display: true,
+                text: 'Age Limit', fontSize: 12.5,
+              }, legend: {
+                position: 'right'
+              }
+            }} /><div id="legend" /></div>
+
         </div>
       </div>
     );
@@ -51,7 +55,7 @@ class App extends Component {
           label: 'Resolved',
           data: [5, 6, 8, 7
           ],
-          borderColor: ['red'], lineTension: 0, backgroundColor: '#d7b28d', fill: true
+          borderColor: ['red'], lineTension: 0, backgroundColor: '#d7b28d', fill: true,
         },
 
         {
@@ -59,7 +63,7 @@ class App extends Component {
           data: [5, 8, 10, 6
           ],
           borderColor: ['orange'], lineTension: 0, backgroundColor: 'rgb(213, 209, 180)',
-          fill: true
+          fill: true,
         },
         {
           label: 'Total',
@@ -67,6 +71,8 @@ class App extends Component {
           borderColor: ['blue'],
           backgroundColor: 'rgb(201, 218, 249)', fill: true,
           lineTension: 0
+
+          ,
         },
         ],
       },
@@ -74,22 +80,13 @@ class App extends Component {
   }
 }
 
-const styles = {
-  relative: {
-    position: 'absolute',
-    height: '300px', width: '30%', border: '1px solid black', padding: '5px', margin: '1%'
-  },
-  relative1:
-  {
-    position: 'absolute',
-    height: '300px', width: '30%', border: '1px solid black', padding: '5px', margin: '1% 1% 1% 60%'
-  }
-};
+
+
 const options = {
   title: { display: true, },
   legend: {
     display: true,
-    position: "right"
+    position: "right", responsive: true, maintainAspectRatio: true,
   }
 };
 const data = {

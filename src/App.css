@@ -19,6 +19,39 @@
 
 
 }
+.chart1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(100%, auto);
+}
+
+.row{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,  30rem);
+  gap: 10px;
+  grid-auto-rows: minmax(auto-fit, auto);
+  padding: 1%;
+
+
+}
+.donut{
+ 
+  border:  1px solid black;
+  padding: 1%;
+height: auto;
+}
+
+.donut1{
+  
+  border:  1px solid black;
+  padding: 1%;
+ height: auto;
+}
+
+
+
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
